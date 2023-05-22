@@ -8,6 +8,20 @@ public:
     MainWindow();
 
 private:
-    void InitializeComponent();
-};
 
+#pragma region Functions
+
+    void InitializeComponent();
+    wxPanel* ICMenuPlaylists();
+    wxPanel* ICMainField();
+    wxPanel* ICAudioStateRow();
+
+#pragma endregion
+
+    wxPanel* menuPlaylistsPanel;
+    wxPanel* mainFieldPanel;
+    wxPanel* audioStatePanel;
+
+    wxBoxSizer* mainHorizontalBS;
+    wxBoxSizer* mainVerticalBS;
+};
