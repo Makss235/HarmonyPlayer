@@ -1,4 +1,5 @@
 #include "MainWindow.h"
+#include "PlaylistPage.h"
 
 MainWindow::MainWindow()
     : wxFrame(nullptr, wxID_ANY, "HarmonyPlayer", 
@@ -10,7 +11,7 @@ MainWindow::MainWindow()
     path.AddRoundedRectangle(0, 0, 900, 800, 10);
     SetShape(path);*/
 
-    SetSizeHints(wxSize(500, 500), wxSize(1100, 1000));
+    SetSizeHints(mainWindowMinSize, mainWindowMaxSize);
     CenterOnScreen();
 
     SetBackgroundColour(wxColour(14, 12, 30));
@@ -35,8 +36,8 @@ void MainWindow::InitializeComponent()
 wxPanel* MainWindow::ICMenuPlaylists()
 {
     menuPlaylistsPanel = new wxPanel(this, wxID_ANY, 
-        wxDefaultPosition, wxSize(250, 100));
-    menuPlaylistsPanel->SetBackgroundColour(wxColour(14, 11, 30));
+        wxDefaultPosition, menuPlaylistsSize);
+    //menuPlaylistsPanel->SetBackgroundColour(wxColour(14, 11, 30));
 
     return menuPlaylistsPanel;
 }
@@ -44,8 +45,17 @@ wxPanel* MainWindow::ICMenuPlaylists()
 wxPanel* MainWindow::ICMainField()
 {
     mainFieldPanel = new wxPanel(this, wxID_ANY,
-        wxDefaultPosition, wxSize(100, 100));
-    mainFieldPanel->SetBackgroundColour(wxColour(44, 222, 30));
+        wxDefaultPosition, mainFieldSize);
+    //mainFieldPanel->SetBackgroundColour(wxColour(44, 222, 30));
+
+    PlaylistPage* j = new PlaylistPage(mainFieldPanel, wxID_ANY,
+        wxDefaultPosition, mainFieldMaxSize);
+
+    wxBoxSizer* b = new wxBoxSizer(wxVERTICAL);
+    b->Add(j);
+
+    mainFieldPanel->SetSizer(b);
+    mainFieldPanel->Layout();
 
     return mainFieldPanel;
 }
@@ -53,8 +63,8 @@ wxPanel* MainWindow::ICMainField()
 wxPanel* MainWindow::ICAudioStateRow()
 {
     audioStatePanel = new wxPanel(this, wxID_ANY,
-        wxDefaultPosition, wxSize(100, 70));
-    audioStatePanel->SetBackgroundColour(wxColour(14, 22, 77));
+        wxDefaultPosition, audioStateRowSize);
+    //audioStatePanel->SetBackgroundColour(wxColour(14, 22, 77));
 
     return audioStatePanel;
 }
