@@ -1,4 +1,6 @@
 #include "PlaylistPage.h"
+#include "CircleControl.h"
+#include "AudioInfo.h"
 
 PlaylistPage::PlaylistPage(wxWindow* parent,
 	wxWindowID winid, const wxPoint& pos,
@@ -21,7 +23,7 @@ void PlaylistPage::InitializeComponent()
 	//headerPlaylistPanel->SetBackgroundColour(wxColour(55, 111, 30));
 
 	wxImage::AddHandler(new wxPNGHandler);
-	wxBitmap bitmap(wxT("C:\\_Audio\\pl1.png"), wxBITMAP_TYPE_PNG);
+	wxBitmap bitmap(wxT("pl1.png"), wxBITMAP_TYPE_PNG);
 	bitmap.Rescale(bitmap, wxSize(128, 128));
 	wxStaticBitmap* bitmapControl = new wxStaticBitmap(
 		headerPlaylistPanel, wxID_ANY, bitmap);
@@ -30,13 +32,33 @@ void PlaylistPage::InitializeComponent()
 	text->SetFont(wxFont(20, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 	text->SetForegroundColour(wxColour("white"));
 
+	
+
+
+
+	AudioInfo f("music5.mp3");
+	wxMessageBox(f.GetArtist());
+
+
+
+
+
+
+
 	wxStaticText* text1 = new wxStaticText(headerPlaylistPanel, wxID_ANY, "Любимые треки");
 	text1->SetFont(wxFont(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 	text1->SetForegroundColour(wxColour("white"));
 
+	CircleControl* cc = new CircleControl(headerPlaylistPanel, wxID_ANY, 
+		wxDefaultPosition, wxSize(12, 12));
+
+	wxBoxSizer* box = new wxBoxSizer(wxHORIZONTAL);
+	box->Add(text1, 0, 0, 0);
+	box->Add(cc, 0, wxALIGN_CENTER | wxLEFT | wxRIGHT, 8);
+
 	wxBoxSizer* bb = new wxBoxSizer(wxVERTICAL);
 	bb->Add(text, 0, 0, 0);
-	bb->Add(text1, 0, wxTOP, 12);
+	bb->Add(box, 0, wxTOP, 12);
 
 	int alignImage = (heightHeaderPanel - bitmapControl->GetSize().GetHeight()) / 2;
 	wxBoxSizer* headerHorizSizer = new wxBoxSizer(wxHORIZONTAL);
