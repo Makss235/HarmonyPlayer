@@ -9,6 +9,8 @@ PlaylistInfo::PlaylistInfo(wxString name, wxString iconSource,
 	this->audioCompositions = audioCompositions;
 	this->totalDuration = wxTimeSpan();
 	this->totalDurationString = wxString();
+
+	CalculatingTotalDuration();
 }
 
 PlaylistInfo::PlaylistInfo(PlaylistObject playlistObject)
@@ -18,6 +20,48 @@ PlaylistInfo::PlaylistInfo(PlaylistObject playlistObject)
 	id = playlistObject.ID;
 
 	audioCompositions = new vector<AudioInfo>();
-	this->totalDuration = wxTimeSpan();
-	this->totalDurationString = wxString();
+	for (int i = 0; i < playlistObject.AudioSources.size(); i++)
+	{
+		audioCompositions->push_back(AudioInfo(playlistObject.AudioSources[i]));
+	}
+
+	totalDuration = wxTimeSpan();
+	totalDurationString = wxString();
+
+	CalculatingTotalDuration();
+}
+
+wxString PlaylistInfo::GetName() {
+	return name;
+}
+
+wxString PlaylistInfo::GetIconSource() {
+	return iconSource;
+}
+
+wxString PlaylistInfo::GetID() {
+	return id;
+}
+
+wxString PlaylistInfo::GetTotalDurationString() {
+	return totalDurationString;
+}
+
+wxTimeSpan PlaylistInfo::GetTotalDuration() {
+	return totalDuration;
+}
+
+vector<AudioInfo>* PlaylistInfo::GetAudioCompositions() {
+	return audioCompositions;
+}
+
+void PlaylistInfo::CalculatingTotalDuration()
+{
+	totalDuration = wxTimeSpan();
+	for(vector<AudioInfo>::iterator iter = audioCompositions->begin(); 
+		iter != audioCompositions->end(); iter++)
+	{
+		totalDuration += (*iter).GetDuration();
+	}
+	totalDurationString = totalDuration.Format("%H:%M:%S");
 }

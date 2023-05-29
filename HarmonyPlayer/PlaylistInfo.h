@@ -13,7 +13,16 @@ public:
 		wxString id, vector<AudioInfo>* audioCompositions);
 	PlaylistInfo(PlaylistObject playlistObject);
 
+	wxString GetName();
+	wxString GetIconSource();
+	wxString GetID();
+	wxString GetTotalDurationString();
+	wxTimeSpan GetTotalDuration();
+	vector<AudioInfo>* GetAudioCompositions();
+
 private:
+	void CalculatingTotalDuration();
+
 	wxString name;
 	wxString iconSource;
 	wxString id;
