@@ -13,54 +13,99 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\Core">
+      <UniqueIdentifier>{efe6840b-203c-4ffa-bf51-037c9b0ee929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Widgets">
+      <UniqueIdentifier>{d5387723-374c-44ec-86fc-84b42590641b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Windows">
+      <UniqueIdentifier>{f7471b6a-2eec-4f99-8f4b-50a1006174dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Core">
+      <UniqueIdentifier>{36098ae4-4b03-4503-959c-8210fe0d994d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Windows">
+      <UniqueIdentifier>{69f2865f-cee2-4bd6-911a-943ac5bed54b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Widgets">
+      <UniqueIdentifier>{c7945af8-1604-4a9f-a9fc-49d164719c55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Resources">
+      <UniqueIdentifier>{86cfe6eb-e7fc-429d-ba4a-f3fcd93fb382}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Resources\Data">
+      <UniqueIdentifier>{10b6b3b7-9ef9-4b78-ac5d-569bf06c66be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Resources\SerializeObject">
+      <UniqueIdentifier>{0f0e5e9a-461a-4fd3-89e4-070e65342ce9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Resources">
+      <UniqueIdentifier>{5d66aafe-986d-4537-a9f4-d7256136d74a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Resources\Data">
+      <UniqueIdentifier>{ecee3834-9ff3-45e8-bd4e-47bbf9279838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Resources\SerializeObject">
+      <UniqueIdentifier>{d7a4d9c1-aa32-4474-985a-3c2eb6b3e869}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MainWindow.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="App.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="PlaylistPage.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="PlaylistButton.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="AudioInfo.cpp">
+      <Filter>Исходные файлы\Core</Filter>
     </ClCompile>
     <ClCompile Include="PlaylistInfo.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Core</Filter>
     </ClCompile>
-    <ClCompile Include="AudioInfo.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="PlaylistButton.cpp">
+      <Filter>Исходные файлы\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaylistPage.cpp">
+      <Filter>Исходные файлы\Widgets</Filter>
     </ClCompile>
     <ClCompile Include="CircleControl.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Исходные файлы\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaylistsData.cpp">
+      <Filter>Исходные файлы\Resources\Data</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MainWindow.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="App.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="PlaylistPage.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="PlaylistButton.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="AudioInfo.h">
+      <Filter>Файлы заголовков\Core</Filter>
     </ClInclude>
     <ClInclude Include="PlaylistInfo.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Core</Filter>
     </ClInclude>
-    <ClInclude Include="AudioInfo.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="MainWindow.h">
+      <Filter>Файлы заголовков\Widgets</Filter>
     </ClInclude>
     <ClInclude Include="CircleControl.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaylistButton.h">
+      <Filter>Файлы заголовков\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaylistPage.h">
+      <Filter>Файлы заголовков\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaylistsData.h">
+      <Filter>Файлы заголовков\Resources\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaylistObject.h">
+      <Filter>Файлы заголовков\Resources\SerializeObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,6 +1,7 @@
 #pragma once
 #include <wx/wx.h>
 #include "PlaylistInfo.h"
+#include "PlaylistsData.h"
 
 class PlaylistPage : 
 	public wxPanel
@@ -25,5 +26,5 @@ public:
 private:
 	void InitializeComponent();
 
-	PlaylistInfo info;
+	PlaylistInfo info = PlaylistInfo(PlaylistsData::GetPlaylistObjects()->at(0));
 };

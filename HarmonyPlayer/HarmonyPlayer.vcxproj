@@ -148,6 +148,7 @@
     <ClCompile Include="PlaylistButton.cpp" />
     <ClCompile Include="PlaylistInfo.cpp" />
     <ClCompile Include="PlaylistPage.cpp" />
+    <ClCompile Include="PlaylistsData.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App.h" />
@@ -156,7 +157,9 @@
     <ClInclude Include="MainWindow.h" />
     <ClInclude Include="PlaylistButton.h" />
     <ClInclude Include="PlaylistInfo.h" />
+    <ClInclude Include="PlaylistObject.h" />
     <ClInclude Include="PlaylistPage.h" />
+    <ClInclude Include="PlaylistsData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

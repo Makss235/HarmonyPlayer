@@ -1,6 +1,7 @@
 #include "PlaylistPage.h"
 #include "CircleControl.h"
 #include "AudioInfo.h"
+#include "PlaylistsData.h"
 
 PlaylistPage::PlaylistPage(wxWindow* parent,
 	wxWindowID winid, const wxPoint& pos,
@@ -32,17 +33,10 @@ void PlaylistPage::InitializeComponent()
 	text->SetFont(wxFont(20, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 	text->SetForegroundColour(wxColour("white"));
 
-	
 
-
-
-	AudioInfo f("music5.mp3");
-	wxMessageBox(f.GetArtist());
-
-
-
-
-
+	PlaylistsData::Initialize("Playlists.json");
+	AudioInfo f(PlaylistsData::GetPlaylistObjects()->at(0).AudioSources[5]);
+	wxMessageBox(f.GetTitle());
 
 
 	wxStaticText* text1 = new wxStaticText(headerPlaylistPanel, wxID_ANY, "Любимые треки");
@@ -50,7 +44,7 @@ void PlaylistPage::InitializeComponent()
 	text1->SetForegroundColour(wxColour("white"));
 
 	CircleControl* cc = new CircleControl(headerPlaylistPanel, wxID_ANY, 
-		wxDefaultPosition, wxSize(12, 12));
+		wxDefaultPosition, wxSize(8, 8));
 
 	wxBoxSizer* box = new wxBoxSizer(wxHORIZONTAL);
 	box->Add(text1, 0, 0, 0);

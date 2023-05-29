@@ -4,7 +4,7 @@ AudioInfo::AudioInfo(wxString filePath)
 {
     this->filePath = filePath;
 
-    TagLib::FileRef file(TagLib::FileName(this->filePath.mb_str(wxConvUTF8)));
+    TagLib::FileRef file(TagLib::FileName(this->filePath.mb_str()));
     if (file.isNull()) 
     {
         return;
@@ -16,7 +16,15 @@ AudioInfo::AudioInfo(wxString filePath)
         return;
     }
 
+    /*auto gg = tag->title().to8Bit(true);
+    auto gg1 = tag->title().to8Bit();
+
+    wxString title1 = tag->title().toCString();
+    wxString title2 = tag->title().toCString(true);*/
+
     title = tag->title().toCString();
+    //wxString title11 = wxString::From8BitData(tag->title().toCString());
+
     album = tag->album().toCString();
     artist = tag->artist().toCString();
     duration = wxTimeSpan(0, 0, 0, file.audioProperties()->lengthInMilliseconds());
@@ -24,33 +32,27 @@ AudioInfo::AudioInfo(wxString filePath)
     isLiked = false;
 }
 
-wxString AudioInfo::GetFilePath()
-{
+wxString AudioInfo::GetFilePath() {
     return filePath;
 }
 
-wxString AudioInfo::GetTitle()
-{
+wxString AudioInfo::GetTitle() {
     return title;
 }
 
-wxString AudioInfo::GetAlbum()
-{
+wxString AudioInfo::GetAlbum() {
     return album;
 }
 
-wxString AudioInfo::GetArtist()
-{
+wxString AudioInfo::GetArtist() {
     return artist;
 }
 
-wxString AudioInfo::GetDurationString()
-{
+wxString AudioInfo::GetDurationString() {
     return durationString;
 }
 
-wxTimeSpan AudioInfo::GetDuration()
-{
+wxTimeSpan AudioInfo::GetDuration() {
     return duration;
 }
 

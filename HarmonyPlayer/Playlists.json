@@ -1,0 +1,20 @@
+[  
+   {
+        "Name": "Любимые треки",
+        "IconSource": "C:\\_Audio\\pl1.png",
+        "ID": "Personal",
+        "AudioSources": [
+            "C:\\_Audio\\55x55_-_stsenarist_(zaycev.net).mp3",
+            "C:\\_Audio\\Spanch_Bob_-_Muzyka_iz_Spanch_Boba.mp3",
+            "C:\\_Audio\\Spanch_Bob_-_Spanch_Bob_tyazh.mp3",
+            "C:\\_Audio\\Ugonna Onyekwe - End of Time_(Inkompmusic.ru).mp3",
+            "C:\\_Audio\\Ugonna Onyekwe - Progressive Moments_(Inkompmusic.ru).mp3",
+            "C:\\_Audio\\Hi Fi - Беспризорник.mp3",
+            "C:\\_Audio\\Hi-Fi - А мы любили.mp3",
+            "C:\\_Audio\\Hi-Fi - Все в огонь.mp3",
+            "C:\\_Audio\\Hi-Fi - Не дано.mp3",
+            "C:\\_Audio\\Кино_-_Группа_крови.mp3",
+            "C:\\_Audio\\Кино_-_Саша.mp3"
+        ]
+    }
+]

@@ -16,14 +16,16 @@ public:
 protected:
     void OnPaint(wxPaintEvent& event)
     {
-        // Create paint DC
         wxPaintDC dc(this);
-        wxBrush brush(wxColor(255, 0, 0)); // Красный цвет
-        wxPen pen(wxColor(wxTransparentColor), 1, wxPENSTYLE_TRANSPARENT); // Без видимой границы
-        dc.SetBrush(brush);
+        wxBrush brush(wxColor(wxTransparentColor));
+        dc.SetBackground(brush);
+        dc.Clear();
+        wxBrush brush1(wxColour("white"));
+        wxPen pen(wxColor(wxTransparentColor), 1, wxPENSTYLE_TRANSPARENT);
+        dc.SetBrush(brush1);
         dc.SetPen(pen);
 
-        dc.DrawCircle(6, 6, 6);
+        dc.DrawCircle(4, 4, 4);
     }
     wxDECLARE_EVENT_TABLE();
 };
