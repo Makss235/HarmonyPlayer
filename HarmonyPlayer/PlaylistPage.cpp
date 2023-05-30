@@ -11,9 +11,7 @@ PlaylistPage::PlaylistPage(wxWindow* parent,
 	InitializeComponent();
 }
 
-PlaylistPage::~PlaylistPage()
-{
-}
+PlaylistPage::~PlaylistPage() { }
 
 void PlaylistPage::InitializeComponent()
 {
@@ -35,8 +33,7 @@ void PlaylistPage::InitializeComponent()
 
 
 	PlaylistsData::Initialize("Playlists.json");
-	AudioInfo f(PlaylistsData::GetPlaylistObjects()->at(0).AudioSources[5]);
-	wxMessageBox(f.GetTitle());
+	wxMessageBox(PlaylistsData::GetPlaylistsInfo()->at(0).GetAudioCompositions()->at(5).GetTitle());
 
 
 	wxStaticText* text1 = new wxStaticText(headerPlaylistPanel, wxID_ANY, "Любимые треки");

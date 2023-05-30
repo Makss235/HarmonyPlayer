@@ -1,4 +1,7 @@
-#include <wx/wx.h>
+#include <wx/string.h>
+#include <vector>
+
+using namespace std;
 
 #pragma once
 struct PlaylistObject
@@ -7,6 +10,6 @@ public:
 	wxString Name;
 	wxString IconSource;
 	wxString ID;
-	wxArrayString AudioSources;
+	vector<wxString>* AudioSources;
 };
 

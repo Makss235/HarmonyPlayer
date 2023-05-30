@@ -4,15 +4,14 @@ void PlaylistsData::Initialize(wxString filePath)
 {
     PlaylistsData::filePath = filePath;
 
-    wxTextFile jsonFile;
-    jsonFile.Open(PlaylistsData::filePath);
+    string line;
+    string textFromFile = "";
+    ifstream ghgh(PlaylistsData::filePath.mb_str());
 
-    wxString textFromFile;
-    for (wxString stringLine = jsonFile.GetFirstLine();
-        !jsonFile.Eof(); stringLine = jsonFile.GetNextLine())
-        textFromFile.append(stringLine);
-
-    jsonFile.Close();
+    while (getline(ghgh, line))
+    {
+        textFromFile.append(line);
+    }
 
     Document document;
     document.Parse(textFromFile.c_str());
@@ -24,12 +23,18 @@ void PlaylistsData::Initialize(wxString filePath)
         playlistObjectCurrent.Name = document[i]["Name"].GetString();
         playlistObjectCurrent.IconSource = document[i]["IconSource"].GetString();
         playlistObjectCurrent.ID = document[i]["ID"].GetString();
+        playlistObjectCurrent.AudioSources = new vector<wxString>();
 
-        auto jj(document[i]["AudioSources"].GetArray());
-        for (size_t i = 0; i < jj.Size(); i++)
-            playlistObjectCurrent.AudioSources.Add(jj[i].GetString());
+        auto audioSourcesArray(document[i]["AudioSources"].GetArray());
+        for (size_t i = 0; i < audioSourcesArray.Size(); i++)
+        {
+            auto a = audioSourcesArray[i].GetString();
+
+            playlistObjectCurrent.AudioSources->push_back("hh");
+        }
 
         playlistObjectsVector->push_back(playlistObjectCurrent);
+        playlistsInfoVector->push_back(PlaylistInfo(playlistObjectCurrent));
     }
 }
 

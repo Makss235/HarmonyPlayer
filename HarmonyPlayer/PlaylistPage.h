@@ -16,15 +16,15 @@ public:
 
 	~PlaylistPage();
 
-	PlaylistInfo GetInfo() {
+	/*PlaylistInfo GetInfo() {
 		return info;
 	}
 	bool SetInfo(PlaylistInfo info) {
 		PlaylistPage::info = info;
 		return true;
-	}
+	}*/
 private:
 	void InitializeComponent();
 
-	PlaylistInfo info = PlaylistInfo(PlaylistsData::GetPlaylistObjects()->at(0));
+	//PlaylistInfo info = PlaylistInfo(PlaylistsData::GetPlaylistObjects()->at(0));
 };

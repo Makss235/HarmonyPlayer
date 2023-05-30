@@ -20,9 +20,9 @@ PlaylistInfo::PlaylistInfo(PlaylistObject playlistObject)
 	id = playlistObject.ID;
 
 	audioCompositions = new vector<AudioInfo>();
-	for (int i = 0; i < playlistObject.AudioSources.size(); i++)
+	for (int i = 0; i < playlistObject.AudioSources->size(); i++)
 	{
-		audioCompositions->push_back(AudioInfo(playlistObject.AudioSources[i]));
+		audioCompositions->push_back(AudioInfo(playlistObject.AudioSources->at(0)));
 	}
 
 	totalDuration = wxTimeSpan();

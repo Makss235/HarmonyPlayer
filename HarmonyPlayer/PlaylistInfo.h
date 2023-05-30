@@ -1,4 +1,5 @@
-#include <wx/wx.h>
+#include <wx/string.h>
+#include <wx/datetime.h>
 #include <vector>
 #include "AudioInfo.h"
 #include "PlaylistObject.h"

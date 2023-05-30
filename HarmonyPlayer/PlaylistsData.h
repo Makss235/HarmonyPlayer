@@ -1,6 +1,6 @@
 #include <vector>
-#include <wx/textfile.h>
-#include <wx/wx.h>
+#include <fstream>
+#include <wx/string.h>
 #include "rapidjson/document.h"
 #include "rapidjson/writer.h"
 #include "rapidjson/stringbuffer.h"
