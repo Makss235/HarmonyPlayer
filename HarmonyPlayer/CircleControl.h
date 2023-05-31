@@ -17,7 +17,7 @@ protected:
     void OnPaint(wxPaintEvent& event)
     {
         wxPaintDC dc(this);
-        wxBrush brush(wxColor(wxTransparentColor));
+        wxBrush brush(wxColour(14, 12, 30));
         dc.SetBackground(brush);
         dc.Clear();
         wxBrush brush1(wxColour("white"));

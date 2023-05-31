@@ -22,7 +22,7 @@ PlaylistInfo::PlaylistInfo(PlaylistObject playlistObject)
 	audioCompositions = new vector<AudioInfo>();
 	for (int i = 0; i < playlistObject.AudioSources->size(); i++)
 	{
-		audioCompositions->push_back(AudioInfo(playlistObject.AudioSources->at(0)));
+		audioCompositions->push_back(AudioInfo(playlistObject.AudioSources->at(i)));
 	}
 
 	totalDuration = wxTimeSpan();

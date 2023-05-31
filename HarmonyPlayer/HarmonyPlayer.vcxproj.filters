@@ -46,9 +46,6 @@
     <Filter Include="Исходные файлы\Resources\Data">
       <UniqueIdentifier>{ecee3834-9ff3-45e8-bd4e-47bbf9279838}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Исходные файлы\Resources\SerializeObject">
-      <UniqueIdentifier>{d7a4d9c1-aa32-4474-985a-3c2eb6b3e869}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
