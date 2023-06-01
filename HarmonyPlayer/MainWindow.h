@@ -1,5 +1,6 @@
 #pragma once
 #include "wx/wx.h"
+#include "PlaylistPage.h"
 
 class MainWindow :
     public wxFrame

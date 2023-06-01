@@ -21,14 +21,22 @@ PlaylistInfo::PlaylistInfo(PlaylistObject playlistObject)
 
 	audioCompositions = new vector<AudioInfo>();
 	for (int i = 0; i < playlistObject.AudioSources->size(); i++)
-	{
 		audioCompositions->push_back(AudioInfo(playlistObject.AudioSources->at(i)));
-	}
 
 	totalDuration = wxTimeSpan();
 	totalDurationString = wxString();
 
 	CalculatingTotalDuration();
+}
+
+PlaylistInfo::PlaylistInfo()
+{
+	name = wxString();
+	iconSource = wxString();
+	id = wxString();
+	audioCompositions = new vector<AudioInfo>();
+	totalDuration = wxTimeSpan();
+	totalDurationString = wxString();
 }
 
 wxString PlaylistInfo::GetName() {

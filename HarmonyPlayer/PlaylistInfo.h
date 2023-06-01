@@ -10,6 +10,7 @@ using namespace std;
 struct PlaylistInfo
 {
 public:
+	PlaylistInfo();
 	PlaylistInfo(wxString name, wxString iconSource, 
 		wxString id, vector<AudioInfo>* audioCompositions);
 	PlaylistInfo(PlaylistObject playlistObject);

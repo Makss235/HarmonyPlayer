@@ -7,6 +7,8 @@ class CircleControl :
     public wxControl
 {
 public:
+    CircleControl() { }
+
     CircleControl(wxWindow* parent, wxWindowID id = wxID_ANY,
         const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize,
         long style = wxBORDER_NONE)
@@ -21,7 +23,7 @@ protected:
         dc.SetBackground(brush);
         dc.Clear();
         wxBrush brush1(wxColour("white"));
-        wxPen pen(wxColor(wxTransparentColor), 1, wxPENSTYLE_TRANSPARENT);
+        wxPen pen(wxColour(14, 12, 30), 1, wxPENSTYLE_TRANSPARENT);
         dc.SetBrush(brush1);
         dc.SetPen(pen);
 

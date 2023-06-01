@@ -1,5 +1,4 @@
 #include "MainWindow.h"
-#include "PlaylistPage.h"
 
 MainWindow::MainWindow()
     : wxFrame(nullptr, wxID_ANY, "HarmonyPlayer", 
@@ -48,8 +47,8 @@ wxPanel* MainWindow::ICMainField()
         wxDefaultPosition, mainFieldSize);
     //mainFieldPanel->SetBackgroundColour(wxColour(44, 222, 30));
 
-    PlaylistPage* j = new PlaylistPage(mainFieldPanel, wxID_ANY,
-        wxDefaultPosition, mainFieldMaxSize);
+    PlaylistPage* j = new PlaylistPage(PlaylistsData::GetPlaylistsInfo()->at(0),
+        mainFieldPanel, wxID_ANY, wxDefaultPosition, mainFieldMaxSize);
 
     wxBoxSizer* b = new wxBoxSizer(wxVERTICAL);
     b->Add(j);
