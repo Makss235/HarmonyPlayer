@@ -4,6 +4,7 @@
 #include "PlaylistsData.h"
 #include "CircleControl.h"
 #include "AudioInfo.h"
+#include "AudioElement.h"
 
 class PlaylistPage : 
 	public wxPanel
@@ -24,6 +25,7 @@ public:
 private:
 	void InitializeComponent();
 	wxPanel* ICHeaderPanel();
+	wxPanel* ICMainFieldPanel();
 
 	PlaylistInfo info;
 	int heightHeaderPanel = 188;
@@ -38,6 +40,8 @@ private:
 	wxBoxSizer* additionalInfoSizer;
 	wxBoxSizer* allInfoSizer;
 	wxBoxSizer* headerHorizSizer;
+	
+	wxPanel* MainPanel;
 
 	wxBoxSizer* mainVertSizer;
 };

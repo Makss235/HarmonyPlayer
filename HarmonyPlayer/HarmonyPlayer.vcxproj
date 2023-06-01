@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="AudioElement.cpp" />
     <ClCompile Include="AudioInfo.cpp" />
     <ClCompile Include="CircleControl.cpp" />
     <ClCompile Include="main.cpp" />
@@ -152,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App.h" />
+    <ClInclude Include="AudioElement.h" />
     <ClInclude Include="AudioInfo.h" />
     <ClInclude Include="CircleControl.h" />
     <ClInclude Include="MainWindow.h" />

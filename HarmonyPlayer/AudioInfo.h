@@ -7,6 +7,7 @@
 struct AudioInfo
 {
 public:
+	AudioInfo();
 	AudioInfo(wxString filePath);
 
 	wxString GetFilePath();

@@ -27,6 +27,7 @@ void PlaylistPage::InitializeComponent()
 {
 	mainVertSizer = new wxBoxSizer(wxVERTICAL);
 	mainVertSizer->Add(ICHeaderPanel(), 0, wxEXPAND);
+	mainVertSizer->Add(ICMainFieldPanel(), 0, wxEXPAND);
 
 	SetSizer(mainVertSizer);
 	Layout();
@@ -76,4 +77,24 @@ wxPanel* PlaylistPage::ICHeaderPanel()
 	headerPlaylistPanel->Layout();
 
 	return headerPlaylistPanel;
+}
+
+wxPanel* PlaylistPage::ICMainFieldPanel()
+{
+	wxPanel* mainPanel = new wxPanel(this, wxID_ANY, wxDefaultPosition, 
+		wxSize(this->GetSize().GetWidth(), 1000));
+
+	/*AudioElement* audio = new AudioElement(info.GetAudioCompositions()->at(4), mainPanel, 
+		wxID_ANY, wxDefaultPosition, wxSize(500, 50));
+	AudioElement* audio2 = new AudioElement(info.GetAudioCompositions()->at(6), mainPanel,
+		wxID_ANY, wxPoint(0, 50), wxSize(500, 100));
+	AudioElement* audio3 = new AudioElement(info.GetAudioCompositions()->at(10), mainPanel,
+		wxID_ANY, wxPoint(0, 100), wxSize(500, 100));*/
+	for (int i = 0; i <= 6; i++)
+	{
+		AudioElement* audio = new AudioElement(info.GetAudioCompositions()->at(i + 4), mainPanel,
+			wxID_ANY, wxPoint(0, 0 + 50 * i), wxSize(500, 50));
+	}
+
+	return mainPanel;
 }

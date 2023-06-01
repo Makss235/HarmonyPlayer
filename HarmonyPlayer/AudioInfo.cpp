@@ -1,5 +1,7 @@
 #include "AudioInfo.h"
 
+AudioInfo::AudioInfo() { }
+
 AudioInfo::AudioInfo(wxString filePath)
 {
     this->filePath = filePath;
