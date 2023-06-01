@@ -2,7 +2,7 @@
 #include <wx/wx.h>
 #include "PlaylistInfo.h"
 #include "PlaylistsData.h"
-//#include "CircleControl.h"
+#include "CircleControl.h"
 #include "AudioInfo.h"
 
 class PlaylistPage : 
@@ -33,7 +33,7 @@ private:
 	wxStaticBitmap* bitmapIconHeaderControl;
 	wxStaticText* nameText;
 	wxStaticText* quantityTracksText;
-	//CircleControl* separatorCircle;
+	CircleControl* separatorCircle;
 	wxStaticText* totalDurationText;
 	wxBoxSizer* additionalInfoSizer;
 	wxBoxSizer* allInfoSizer;

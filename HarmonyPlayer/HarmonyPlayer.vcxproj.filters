@@ -92,17 +92,17 @@
     <ClInclude Include="CircleControl.h">
       <Filter>Файлы заголовков\Windows</Filter>
     </ClInclude>
-    <ClInclude Include="PlaylistButton.h">
-      <Filter>Файлы заголовков\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="PlaylistPage.h">
-      <Filter>Файлы заголовков\Windows</Filter>
-    </ClInclude>
     <ClInclude Include="PlaylistsData.h">
       <Filter>Файлы заголовков\Resources\Data</Filter>
     </ClInclude>
     <ClInclude Include="PlaylistObject.h">
       <Filter>Файлы заголовков\Resources\SerializeObject</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaylistButton.h">
+      <Filter>Файлы заголовков\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaylistPage.h">
+      <Filter>Файлы заголовков\Widgets</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

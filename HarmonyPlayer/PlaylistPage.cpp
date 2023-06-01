@@ -52,7 +52,7 @@ wxPanel* PlaylistPage::ICHeaderPanel()
 	quantityTracksText->SetFont(wxFont(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD));
 	quantityTracksText->SetForegroundColour(wxColour("white"));
 
-	CircleControl* separatorCircle = new CircleControl(headerPlaylistPanel, wxID_ANY,
+	separatorCircle = new CircleControl(headerPlaylistPanel, wxID_ANY,
 		wxDefaultPosition, wxSize(8, 8));
 
 	totalDurationText = new wxStaticText(headerPlaylistPanel, wxID_ANY, info.GetTotalDurationString());
